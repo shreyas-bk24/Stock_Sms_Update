@@ -5,7 +5,7 @@ import os
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-# Stock_API_KEY="2KCK99HVB83HMTJ6"
+
 Stock_API_KEY=os.environ['STOCK_API_KEY']
 news_api_key=os.environ['news_api_key']
 twilio_SID=os.environ['TWILIO_SID']
@@ -69,6 +69,6 @@ if abs(diff_percent)>5:
     for article in formatted_article:
         message=client.messages.create(
             body=article,
-            from_="###########",#twilio number
-            to="#######"    #client number with contry code
+            from_="###########",                #twilio number
+            to="#######"                        #client number with contry code
         )
